@@ -11,7 +11,7 @@
     --header: 'Noto Sans Mono', monospace;
     --paragraph:  'Poppins', sans-serif;
     --primaryColor: #e4e5ee;
-    --secondaryColor: blue;
+    --secondaryColor: #4070F4;
     --accentColor: green;
     --textColor: #303030;
 }
@@ -39,7 +39,7 @@
     top: 0;
     left: 0;
     font-family: var(--header);
-    background-color: rgba(255, 255, 255, .25);
+    background-color: rgba(255, 255, 255, .15);
 }
 .main-nav{
     width: 100%;
@@ -63,4 +63,67 @@
 #hero-section{
     width: 100%;
     height: 100vh;
+    background-image: linear-gradient(rgba(64,112,244,.50), rgba(0, 0, 0, .75)), url(img/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.myprofile-pic{
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 64px 0;
+}
+.myprofile-pic img{
+    border-radius: 50%;
+    border: 1px solid rgba(225, 225, 225, 0.25);
+    filter: drop-shadow(0 0 5px rgba(64,112,244));
+}
+.profile-background{
+    background-color: var(--secondaryColor);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(50deg);
+    border: 1px solid rgba(225, 225, 225, 0.25);
+    box-shadow: 0 0 10px 1px var(--secondaryColor);
+}
+
+.hero-content{
+    width: 80%;
+    height: max-content;
+    text-align: center;
+    margin-top: 32px;
+}
+.hero-header{
+    font-family: var(--header);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primaryColor);
+}
+.hero-header span{
+   text-transform: uppercase;
+   font-weight: 600;
+   color: var(--secondaryColor);
+   margin-left: .50rem;
+   font-family: var(--paragraph);
+}
+.hero-para{
+    font-size: 1.2rem;
+    color: var(--primaryColor);
+}
+.hero-para p:nth-child(2){
+   text-transform: uppercase;
+   font-weight: 600;
+   color: var(--secondaryColor);
 }
