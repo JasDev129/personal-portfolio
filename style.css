@@ -50,15 +50,14 @@
 }
 .logo{
     font-size: 2rem;
-    color: var(--textColor);
-    filter: drop-shadow(0 0 2px var(--secondaryColor)); 
+    color: var(--secondaryColor);
+    filter: drop-shadow(0 0 1px var(--primaryColor)); 
 }
 .logo span{
     font-size: 2.3rem;
     font-weight: 900;
     margin-left: -16px;
-    color: var(--secondaryColor);
-    filter: drop-shadow(0 0 4px var(--textColor));
+    color: var(--textColor);
 }
 .nav-list{
     display: flex;
@@ -67,24 +66,79 @@
     opacity: 0;
     visibility: hidden;
     transition: all .50s ease;
+    
 }
 .nav-link a{
     text-decoration: none;
     color: var(--textColor);
     text-transform: uppercase;
     font-weight: 600;
+    transition: all .35s linear;
+    font-size: 1.1rem;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.nav-link a::before{
+    content: '';
+    position: absolute;
+    top: 87%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 50px;
+    background-color: var(--textColor);
+    transition: all .75s ease;
 }
 .nav-toggle{
     font-size: 2rem;
     color: var(--textColor);
     transition: all .75s ease;
 }
+.nav-link a:hover::before{
+    width: 0;
+    background-color: #4070F4;
+}
 .nav-link a:hover, .nav-toggle:hover{
     color: var(--secondaryColor);
+    filter: drop-shadow(0 0 1px var(--textColor));
 }
-.nav-link a:focus, .nav-toggle:focus{
+.nav-link a:focus{
+    color: #4070F4;
+}
+.nav-toggle:focus{
     color: var(--textColor);
 }
+/* NAVIGATION MEDIA QUERIES */
+
+    @media screen and (min-width: 992px) {
+        .header{
+            background: linear-gradient(to bottom right , rgba(0, 0 ,0, .95), rgba(255,255,255,.20));
+        }
+        .main-nav{
+            width: 80%;
+            margin: 0 auto;
+        }
+        .nav-toggle{
+            display: none;
+        }
+        .nav-list{
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        .nav-link{
+            font-size: 1.3rem;
+            font-weight: 800;
+        }
+        .logo{
+            font-size: 2.5rem;
+        }
+    }
+
+
+
+
+
 /* HERO SECTION */
 #hero-section{
     width: 100%;
@@ -152,4 +206,22 @@
    text-transform: uppercase;
    font-weight: 600;
    color: var(--secondaryColor);
+}
+
+.cta{
+    position: relative;
+    top: 50%;
+    left: 0;
+}
+ .cta-btn{
+    background-color: rgba(64,112,244, .25);
+    padding: 10px 20px;
+    border-radius: 50%;
+    color: var(--secondaryColor);
+}
+ .cta-btn:hover{
+    background-color: rgba(64,112,244, .35);
+    color: var(--textColor);
+    filter: drop-shadow(0 0 10px var(--secondaryColor));
+    border: .50px solid rgba(225, 225, 225, 0.25);
 }
