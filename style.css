@@ -39,7 +39,7 @@
     top: 0;
     left: 0;
     font-family: var(--header);
-    background-color: rgba(255, 255, 255, .15);
+    background-color: rgba(0, 0, 0, .15);
 }
 .main-nav{
     width: 100%;
@@ -47,17 +47,29 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+   
 }
 .nav-list{
     display: flex;
     list-style: none;
-    gap: 32px
+    gap: 32px;
+    /* visibility: hidden; */
+    opacity: 0;
+     transition: all .50s ease;
 }
 .nav-link a{
     text-decoration: none;
     color: var(--textColor);
     text-transform: uppercase;
     font-weight: 600;
+}
+.nav-toggle{
+    font-size: 2rem;
+    color: var(--textColor);
+    transition: all .75s ease;
+}
+.nav-link a:hover, .nav-toggle:hover{
+    color: var(--secondaryColor);
 }
 /* HERO SECTION */
 #hero-section{
