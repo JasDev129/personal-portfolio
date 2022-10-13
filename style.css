@@ -148,6 +148,7 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .hero-container{
     width: 100%;
     height: 100%;
@@ -155,12 +156,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 .myprofile-pic{
     position: relative;
     top: 0;
     left: 0;
     margin: 64px 0;
+    transition: all 1s linear;
 }
 .myprofile-pic img{
     border-radius: 50%;
@@ -177,6 +180,7 @@
     transform: rotate(50deg);
     border: 1px solid rgba(225, 225, 225, 0.25);
     box-shadow: 0 0 10px 1px var(--secondaryColor);
+    transition: all 1s linear;
 }
 
 .hero-content{
@@ -184,12 +188,14 @@
     height: max-content;
     text-align: center;
     margin-top: 32px;
+     transition: all 1s linear;
 }
 .hero-header{
     font-family: var(--header);
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--primaryColor);
+    transition: all 1s ease-in-out;
 }
 .hero-header span{
    text-transform: uppercase;
@@ -201,6 +207,7 @@
 .hero-para{
     font-size: 1.2rem;
     color: var(--primaryColor);
+        transition: all 1s ease-in-out;
 }
 .hero-para p:nth-child(2){
    text-transform: uppercase;
@@ -210,7 +217,7 @@
 
 .cta{
     position: relative;
-    top: 50%;
+    top: 5%;
     left: 0;
 }
  .cta-btn{
@@ -225,3 +232,30 @@
     filter: drop-shadow(0 0 10px var(--secondaryColor));
     border: .50px solid rgba(225, 225, 225, 0.25);
 }
+
+
+/* HERO MEDIA QUERY */
+
+    @media screen and (min-width:992px) {
+        
+    .hero-header{
+        font-size: 2rem;  
+    }
+    .hero-para{
+        font-size: 1.7rem;
+    }
+    .hero-para p:nth-child(2){
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--secondaryColor);
+    }
+    }
+     @media screen and (max-width: 576px) {
+
+        .hero-container{
+
+            display: flex !important;
+     
+        }
+    
+    }
